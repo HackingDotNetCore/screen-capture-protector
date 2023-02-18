@@ -35,6 +35,5 @@ There are two types of DWORD values **WDA_MONITOR** and **WDA_NONE**. We have to
     }
 ```
 
-## Feedback
-
-If you have any feedback, please reach out to us at akin.bicer@outlook.com.tr
+## Issues, Feature Requests or Support
+Please use the [New Issue](https://github.com/akinbicer/screen-capture-protector/issues/new) button to submit issues, feature requests or support issues directly to me. You can also send an e-mail to akin.bicer@outlook.com.tr.
