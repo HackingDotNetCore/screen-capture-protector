@@ -11,11 +11,6 @@ namespace ScreenCaptureProtector
         private const uint WDA_NONE = 0x00000000;
         private const uint WDA_MONITOR = 0x00000001;
 
-        public MainScreen()
-        {
-            InitializeComponent();
-        }
-
         [DllImport("user32.dll")]
         public static extern uint SetWindowDisplayAffinity(IntPtr hWnd, uint dwAffinity);
 
@@ -33,11 +28,17 @@ namespace ScreenCaptureProtector
             
             return form != null && isProtect ? SetWindowDisplayAffinity(form.Handle, WDA_MONITOR) == WDA_MONITOR : SetWindowDisplayAffinity(form.Handle, WDA_NONE) == WDA_NONE;
         }
+        
+        public MainScreen()
+        {
+            InitializeComponent();
+        }
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
+            //var result = SetProtect("chrome.exe", this, true);
             var result = SetProtect(this, true);
-            SetProtect("chrome.exe", this, true);
+            
             Text = $"Screen Capture Protector // Protection: {result}";
         }
     }
