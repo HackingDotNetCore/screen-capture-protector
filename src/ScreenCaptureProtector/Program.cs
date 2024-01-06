@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using ScreenCaptureProtector.Utilities;
 using ScreenCaptureProtector.Utilities.DependencyInjection;
 using ScreenCaptureProtector.Utilities.Helpers;
 

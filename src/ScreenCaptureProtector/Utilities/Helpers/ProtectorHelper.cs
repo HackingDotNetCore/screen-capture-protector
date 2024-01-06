@@ -10,9 +10,6 @@ namespace ScreenCaptureProtector.Utilities.Helpers
         private const uint WDA_NONE = 0x00000000;
         private const uint WDA_MONITOR = 0x00000001;
 
-        [DllImport("user32.dll")]
-        public static extern uint SetWindowDisplayAffinity(IntPtr hWnd, uint dwAffinity);
-
         public bool Start(Form form)
         {
             if (form == null)
@@ -63,5 +60,8 @@ namespace ScreenCaptureProtector.Utilities.Helpers
                 return false;
             }
         }
+
+        [DllImport("user32.dll")]
+        public static extern uint SetWindowDisplayAffinity(IntPtr hWnd, uint dwAffinity);
     }
 }
